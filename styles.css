@@ -1,0 +1,42 @@
+/* 实验六：参照老师的灰色边框、横排标签和五行列表。 */
+* { box-sizing: border-box; }
+body {
+  margin: 10px;
+  background: #fff;
+  color: #333;
+  font-family: "SimSun", "宋体", serif;
+  font-size: 12px;
+}
+.lyf_tabs { width: 320px; max-width: 100%; border: 1px solid #d9d9d9; }
+.lyf_tab_list { display: flex; }
+.lyf_tab {
+  flex: 1;
+  min-width: 0;
+  height: 32px;
+  padding: 0;
+  border: 0;
+  border-right: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+  border-radius: 0;
+  background: #f7f7f7;
+  color: #075780;
+  font: inherit;
+  cursor: pointer;
+}
+.lyf_tab:last-child { border-right: 0; }
+.lyf_tab.lyf_active { border-bottom-color: #fff; background: #fff; color: #333; font-weight: 700; }
+.lyf_tab:focus-visible { outline: 2px solid #075780; outline-offset: -3px; }
+.lyf_panel[hidden] { display: none; }
+.lyf_news_list { margin: 0; padding: 0; list-style: none; counter-reset: lyf_news; }
+.lyf_news_list li {
+  display: flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 0 8px;
+  border-bottom: 1px solid #ededed;
+  counter-increment: lyf_news;
+}
+.lyf_news_list li:last-child { border-bottom: 0; }
+.lyf_news_list li::before { content: counter(lyf_news) "."; margin-right: 3px; color: #ff3535; }
+.lyf_tag { margin-left: auto; padding-left: 8px; color: #ff3535; white-space: nowrap; }
+.lyf_note { margin: 8px 0 0; color: #777; font-size: 12px; }

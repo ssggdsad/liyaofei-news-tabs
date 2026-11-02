@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>实验六 · 新闻选项卡</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./tabs.js" defer></script>
+</head>
+<body>
+  <!-- 同一组的选项卡与内容放在 data-lyf-tabs 容器中，可复用 tabs.js。 -->
+  <div class="lyf_tabs" id="lyf_news" data-lyf-tabs>
+    <div class="lyf_tab_list" role="tablist" aria-label="新闻分类">
+      <button type="button" class="lyf_tab lyf_active" id="lyf_tab_domestic" role="tab" aria-selected="true" aria-controls="lyf_panel_domestic" tabindex="0" data-lyf-tab>国内新闻</button>
+      <button type="button" class="lyf_tab" id="lyf_tab_province" role="tab" aria-selected="false" aria-controls="lyf_panel_province" tabindex="-1" data-lyf-tab>省内新闻</button>
+      <button type="button" class="lyf_tab" id="lyf_tab_world" role="tab" aria-selected="false" aria-controls="lyf_panel_world" tabindex="-1" data-lyf-tab>国际新闻</button>
+      <button type="button" class="lyf_tab" id="lyf_tab_hot" role="tab" aria-selected="false" aria-controls="lyf_panel_hot" tabindex="-1" data-lyf-tab>最热新闻</button>
+    </div>
+    <div class="lyf_panel" id="lyf_panel_domestic" role="tabpanel" aria-labelledby="lyf_tab_domestic" tabindex="0" data-lyf-panel>
+      <ol class="lyf_news_list">
+        <li><span>国内科技创新成果展示</span><span class="lyf_tag">科技</span></li>
+        <li><span>公共文化服务走进社区</span><span class="lyf_tag">文化</span></li>
+        <li><span>绿色出行倡议受到关注</span><span class="lyf_tag">生活</span></li>
+        <li><span>校园阅读活动分享交流</span><span class="lyf_tag">教育</span></li>
+        <li><span>全民健身知识专题介绍</span><span class="lyf_tag">体育</span></li>
+      </ol>
+    </div>
+    <div class="lyf_panel" id="lyf_panel_province" role="tabpanel" aria-labelledby="lyf_tab_province" tabindex="0" data-lyf-panel hidden>
+      <ol class="lyf_news_list">
+        <li><span>省内校园开展技能交流</span><span class="lyf_tag">教育</span></li>
+        <li><span>城市公园景观主题展示</span><span class="lyf_tag">生活</span></li>
+        <li><span>地方非遗文化作品展览</span><span class="lyf_tag">文化</span></li>
+        <li><span>社区志愿服务经验分享</span><span class="lyf_tag">公益</span></li>
+        <li><span>乡村特色农产品介绍</span><span class="lyf_tag">农业</span></li>
+      </ol>
+    </div>
+    <div class="lyf_panel" id="lyf_panel_world" role="tabpanel" aria-labelledby="lyf_tab_world" tabindex="0" data-lyf-panel hidden>
+      <ol class="lyf_news_list">
+        <li><span>国际科技合作话题交流</span><span class="lyf_tag">科技</span></li>
+        <li><span>世界自然遗产知识介绍</span><span class="lyf_tag">自然</span></li>
+        <li><span>全球绿色能源专题阅读</span><span class="lyf_tag">环境</span></li>
+        <li><span>各国传统节日文化分享</span><span class="lyf_tag">文化</span></li>
+        <li><span>国际体育赛事规则科普</span><span class="lyf_tag">体育</span></li>
+      </ol>
+    </div>
+    <div class="lyf_panel" id="lyf_panel_hot" role="tabpanel" aria-labelledby="lyf_tab_hot" tabindex="0" data-lyf-panel hidden>
+      <ol class="lyf_news_list">
+        <li><span>人工智能学习话题分享</span><span class="lyf_tag">科技</span></li>
+        <li><span>大学生网页设计作品展</span><span class="lyf_tag">校园</span></li>
+        <li><span>秋季户外运动知识介绍</span><span class="lyf_tag">体育</span></li>
+        <li><span>网络安全常识专题阅读</span><span class="lyf_tag">安全</span></li>
+        <li><span>阅读与学习方法交流</span><span class="lyf_tag">教育</span></li>
+      </ol>
+    </div>
+  </div>
+  <p class="lyf_note">课堂演示数据，非实时新闻。</p>
+</body>
+</html>
